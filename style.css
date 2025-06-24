@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Tajawal', Arial, sans-serif;
     margin: 0;
@@ -6,6 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    width: 100%;
 }
 
 .navbar {
@@ -15,6 +20,7 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .navbar ul {
@@ -25,6 +31,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* السماح بفك التفاف العناصر */
 }
 
 .navbar li {
@@ -46,17 +53,18 @@ body {
 
 header {
     text-align: center;
-    padding: 200px 20px; /* زيادة التباعد لضمان ظهور الصورة */
+    padding: 200px 20px;
     background: url('background-image.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     border-bottom: 4px solid #93c5fd;
     position: relative;
-    min-height: 600px; /* زيادة الارتفاع الأدنى */
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 header::before {
@@ -74,6 +82,7 @@ header h1, header .intro {
     position: relative;
     z-index: 2;
     padding: 0 20px;
+    width: 100%;
 }
 
 header h1 {
@@ -94,7 +103,8 @@ header h1 {
 main {
     max-width: 1200px;
     margin: 30px auto;
-    padding: 0 20px;
+    padding: 0 10px; /* تقليل التباعد الجانبي */
+    width: 100%;
 }
 
 .content-section {
@@ -104,6 +114,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: right;
+    width: 100%;
 }
 
 h2 {
@@ -159,6 +170,7 @@ footer {
     color: white;
     margin-top: 30px;
     border-top: 4px solid #93c5fd;
+    width: 100%;
 }
 
 /* استجابة للشاشات الصغيرة (مثل الموبايل) */
@@ -225,5 +237,13 @@ footer {
     .navbar a {
         font-size: 14px;
         padding: 5px;
+    }
+
+    main {
+        padding: 0 5px;
+    }
+
+    .content-section {
+        padding: 10px;
     }
 }
